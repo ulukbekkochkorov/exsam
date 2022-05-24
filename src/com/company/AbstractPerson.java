@@ -1,28 +1,32 @@
 package com.company;
 
-public abstract class AbstractPerson {
+public abstract class AbstractPerson implements Walkable,Learnable {
 
         String name;
         String designatione;
 
-        public Person (){};
+        public AbstractPerson (){};
 
-        public Person(String name, String disignatione) {
+        public AbstractPerson (String name, String disignatione) {
             this.name = name;
-            designatione = disignatione;
+            this. designatione = disignatione;
         }
 
-        String learn () {
-            return("Human can learn");
-        }
-        String walk () {
-            return("Human can wolk");
-        }
-        String abstractEat () {
+              String abstractEat () {
             return("Human eats");
         }
 
-        @Override
+    @Override
+    public void learn() {
+
+    }
+
+    @Override
+    public void walk() {
+
+    }
+
+    @Override
         public String toString() {
             return "Person{" +
                     "name='" + name + '\'' +
@@ -31,4 +35,4 @@ public abstract class AbstractPerson {
         }
     }
 
-}
+

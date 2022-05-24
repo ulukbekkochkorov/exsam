@@ -1,28 +1,27 @@
 package com.company;
 
-    public class Programmer extends Person {
-        private final String name;
+    public class Programmer extends AbstractPerson {
+
         private String companyName;
 
-        public Programmer(String name, String designatione, String companyName) {
-            this.name = name;
-            this.designatione = designatione;
+        public Programmer(String name, String disignatione, String companyName) {
+            super(name, disignatione);
             this.companyName = companyName;
         }
-        public Programmer(String name, String designatione) {
-            super(name, designatione);
+
+        @Override
+        public String abstractEat() {
+            return (name + " likes eat steak");
         }
         @Override
-        String eat() {
-            return(name + " likes to eat steake");
+        public void learn() {
+            System.out.println(name+ " is learning English");
+
         }
         @Override
-        String learn() {
-            return(name + " learns math");
-        }
-        @Override
-        String walk () {
-            return (name + " often wolks in the park");
+        public void walk() {
+            System.out.println(name+ " likes walk");
+
         }
 
         @Override
